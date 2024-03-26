@@ -1,12 +1,17 @@
 # Elementary-Cellular-Automata Explorer
 
 A command-line program for experimenting with
-[elementary cellular automata](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). It takes as argument the [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) (0-255) of the rule, and optionally an initial cell configuration (a sequence of ones and zeroes). By default, it runs until the entire terminal is filled with cells (in an alternate terminal screen), but you can also manually specify the number of generations to compute, and then add a delay between the generations to make it scroll. 
+[elementary cellular automata](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). It takes as
+argument the [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) (0-255) of the rule, and optionally
+an initial cell configuration (a sequence of ones and zeroes). By default, it runs until the entire terminal
+is filled with cells (in an alternate terminal screen), but you can also manually specify the number of
+generations to compute, and then add a delay between the generations to make it scroll. 
 
 
 # Usage
 
-Build the binary using `cargo build` and invoke the binary according to the manual below. Optionally, you can also run it with `cargo run -- [OPTIONS] <RULE> [INITIAL]`. 
+Build the binary using `cargo build` and invoke it according to the manual below. Optionally, you can also
+run it with `cargo run -- [OPTIONS] <RULE> [INITIAL]`. 
 
 ```
 Usage: eca_explorer [OPTIONS] <RULE> [INITIAL]
