@@ -1,4 +1,4 @@
-# Elementary Cellular Automata
+# Elementary-Cellular-Automata Explorer
 
 A command-line program for experimenting with
 [elementary cellular automata](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). It takes as argument the [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) (0-255) of the rule, and optionally an initial cell configuration (a sequence of ones and zeroes). By default, it runs until the entire terminal is filled with cells (in an alternate terminal screen), but you can also manually specify the number of generations to compute, and then add a delay between the generations to make it scroll. 
@@ -16,8 +16,8 @@ Arguments:
           The Wolfram code (0-255) of the rule
 
   [INITIAL]
-          Initial cell configuration. If not specified, a random configuration with the same printed width as
-          the terminal is used
+          Initial cell configuration. If not specified, a random configuration with the same
+          printed width as the terminal is used
 
 Options:
   -e, --edges <EDGES>
@@ -43,7 +43,7 @@ Options:
 
 # Examples
 
-### Rule 22 with a single toggled cell. 
+### Rule 22 with a single toggled cell
 ```console
 $ eca_explorer 22 0000000000000000000000000001000000000000000000000000000
 ```
@@ -51,7 +51,7 @@ $ eca_explorer 22 0000000000000000000000000001000000000000000000000000000
 ![rule 22 demo](img/rule_22.png)
 
 
-### Rule 62 with a single toggled cell. 
+### Rule 62 with a single toggled cell
 ```console
 $ eca_explorer 62 0000000000000000000000000001000000000000000000000000000
 ```
