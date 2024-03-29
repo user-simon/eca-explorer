@@ -51,11 +51,9 @@ impl Cells {
 
     // Returns `[first two cells, last two cells]`
     fn edges(&self) -> [[bool; 2]; 2] {
-        let len = self.0.len();
-        [0..2, len-2..len]
-            .map(|r| &self.0[r])
-            .map(TryInto::try_into)
-            .map(Result::unwrap)
+        [self.0.first_chunk::<2>(), self.0.last_chunk::<2>()]
+            .map(|x| x.copied())
+            .map(|x| x.expect("There are at least 2 cells"))
     }
 }
 
