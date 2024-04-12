@@ -7,6 +7,8 @@ an initial cell configuration (a sequence of ones and zeroes). By default, it ru
 is filled with cells (in an alternate terminal screen), but you can also manually specify the number of
 generations to compute, and then add a delay between the generations to make it scroll. 
 
+A practical use case for this program has eluded researchers for years. 
+
 
 # Usage
 
