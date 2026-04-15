@@ -13,7 +13,7 @@ use crossterm::{
     terminal::{EnterAlternateScreen, LeaveAlternateScreen}, 
 };
 use main_error::MainResult;
-use rand::Rng;
+use rand::prelude::*;
 
 /// Rule composed of a boolean outcome for all 8 possible 3-cell neighbourhood combinations. Represented as
 /// its Wolfram code. 
@@ -35,9 +35,10 @@ struct Cells(Vec<bool>);
 
 impl Cells {
     fn new_random(width: u16) -> Cells {
-        let mut cells = vec![false; width as usize];
-        let mut rng = rand::thread_rng();
-        rng.fill(&mut cells[..]);
+        let cells = rand::rng()
+            .sample_iter(rand::distr::StandardUniform)
+            .take(width as usize)
+            .collect();
         Cells(cells)
     }
 
